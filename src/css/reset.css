@@ -11,9 +11,12 @@ em,
 i {
   font-style: normal;
 }
+ul {
+  list-style-type: none;
+}
 html,
 body {
-  width: 100%;
+  min-width: 1226px;
 }
 .content {
   width: 1226px;

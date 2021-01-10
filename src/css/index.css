@@ -1,3 +1,4 @@
+@charset 'utf-8';
 #top_ad {
   background: url(../img/top_ad.jpg) center;
   background-size: auto 120px;
@@ -23,6 +24,19 @@
 }
 .head_top .head_left {
   float: left;
+}
+.head_top .head_left .head_code {
+  display: inline-block;
+  position: relative;
+}
+.head_top .head_left .head_code .code_box {
+  position: absolute;
+  top: 40px;
+  width: 90px;
+  height: 90px;
+}
+.head_top .head_left .head_code .code_box img {
+  width: 100%;
 }
 .head_top .head_right {
   float: right;

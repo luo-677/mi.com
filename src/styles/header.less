@@ -1,0 +1,178 @@
+@mi-color:#ff6700;
+.head_top{
+    height: 40px;
+    line-height: 40px;
+    background-color: #333333;
+    *{
+        font-size: 12px;
+    }
+    .head_left,.head_right{
+        a{
+            &:hover{
+                color: #fff;
+            }
+        }
+        >span{
+            margin: 0 .5em;
+            color: #424242;
+        }
+    }
+    .head_left{
+        float: left;
+        .head_code{
+            display: inline-block;
+            position: relative;
+            .triangle{
+                width: 0;
+                border: 8px solid black;
+                border-color: transparent transparent white transparent;
+                position: absolute;
+                bottom: 0;
+                left: 15px;
+                display: none;
+            }
+            .code_box{
+                display: none;
+                position: absolute;
+                top: 40px;
+                left: -40px;
+                width: 90px;
+                height: 90px;
+                padding: 20px 20px 40px;
+                box-shadow: 0 1px 5px #aaa;
+                img{
+                    width: 100%;
+                    display: block;
+                }
+                p{
+                    height: 40px;
+                    line-height: 40px;
+                    text-align: center;
+                    font-size: 14px;
+                    color: black;
+                }
+            }
+        }
+    }
+    .head_right{
+        float: right;
+        .shopping{
+            width: 120px;
+            height: 100%;
+            display: inline-block;
+            text-align: center;
+            background-color: #424242;
+            margin-left: 25px;
+            position: relative;
+            // transition: background-color 4.2s,color .2s;
+            &:hover{
+                background-color: #fff;
+                color: @mi-color;
+                span,em{
+                    color: @mi-color;
+                }
+            }
+            .shopping_box{
+                width: 316px;
+                height: 0;
+                background-color: black;
+                position: absolute;
+                left: -196px;
+                box-shadow: 0 1px 5px #aaa;
+            }
+            .shopping_box_active{
+                height: 100px;
+            }
+        }
+    }
+}
+.head_bot{
+    .content{
+        .logo{
+            position: relative;
+            margin-top: 22px;
+            float: left;
+            width: 55px;
+            height: 55px;
+            overflow: hidden;
+            .logo_1,.logo_2{
+                width: 100%;
+                height: 100%;
+                top: 0;
+                position: absolute;
+                transition: left .2s;
+            }
+            .logo_1{
+                left: 0;
+                background: url(../img/mi-logo.png) no-repeat center;
+            }
+            .logo_2{
+                left: -55px;
+                background: url(../img/mi-home.png) no-repeat center;
+            }
+            background-color: @mi-color;
+            transition: left .2s;
+            &:hover{
+                .logo_1{
+                    left: 55px;
+                }
+                .logo_2{
+                    left: 0;
+                }
+                background-color: @mi-color;
+            }
+        }
+        .head_menu{
+            float: left;
+            height: 100px;
+            line-height: 100px;
+            margin-left: 60px;
+            li{
+                &:first-child{
+                    visibility: hidden;
+                }
+                float: left;
+                padding: 0 10px;
+                a{
+                    font-size: 16px;
+                    color: black;
+                    &:hover{
+                        color: @mi-color;
+                    }
+                }
+            }
+        }
+        .form{
+            float: right;
+            height: 100px;
+            line-height: 100px;
+            font-size: 0;
+            padding-top: 25px;
+            box-sizing: border-box;
+            
+            #search,#btn_search{
+                height: 50px;
+                line-height: 50px;
+                border: 1px solid black;
+                box-sizing: border-box;
+                line-height: 50px;
+                float: left;
+            }
+            #search{
+                width: 245px;
+                padding: 0 10px;
+                outline: none;  
+            }
+            #btn_search{
+                border-left: none;
+                width: 51px;
+                outline: none;
+                &:hover{
+                    background-color: @mi-color;
+                    border: none;
+                    top: 0px;
+                }
+            }
+        }
+    }
+}

@@ -10,18 +10,23 @@ a{
 em,i{
     font-style: normal;
 }
+ul{
+    list-style-type: none;
+}
 html,body{
-    width: 100%;
+    min-width: 1226px;
 }
 .content{
     width: 1226px;
     margin: 0 auto;
 }
-.clear::after{
-    content: "";
-    display: block;
-    clear: both;
-    height: 0;
-    overflow: hidden;
-    visibility: hidden;
+.clear{
+    &::after{
+        content: "";
+        display: block;
+        clear: both;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+    }
 }
