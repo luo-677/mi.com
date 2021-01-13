@@ -9,6 +9,15 @@
             top: 0;
             left: 0;
         }
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+          }
+      
+          .swiper-slide {
+            background-position: center;
+            background-size: cover;
+          }
     }
     .carousel_nemu{
         margin-top: 14px;
@@ -19,14 +28,54 @@
         .carousel_nemu_1{
             width: 234px;
             height: 100%;
-            background-color: chocolate;
+            background-color: #5f5750;
+            // background-color: chocolate;
             margin-right: 1px;
+            li{
+                width: 70px;
+                height: 82px;
+                float: left;
+                padding: 0 3px;
+                position: relative;
+                // box-sizing: border-box;
+                .a1 {
+                    display: block;
+                    padding-top: 18px;
+                    text-align: center;
+                    img{
+                        width: 24px;
+                        height: 24px;
+                        margin: 0 23px 4px 23px;
+                    }
+                }
+                &::before {
+                    top: 2px;
+                    left: 6px;
+                    width: 64px;
+                    height: 1px;
+                    position: absolute;
+                    content: "";
+                    background: #665e57;
+                }
+                &::after {
+                    top: 6px;
+                    left: 0;
+                    width: 1px;
+                    height: 70px;
+                    position: absolute;
+                    content: "";
+                    background: #665e57;
+                }
+            }
         }
         .carousel_nemu_same{
             width: 316px;
             height: 100%;
-            background-color: chocolate;
+            // background-color: chocolate;
             margin-left: 14px;
+            img{
+                width: 100%;
+            }
         }
     }
 }
@@ -150,8 +199,19 @@
     .mi_phone_box{
         .mi_phone_topad{
             margin: 22px 0;
+            a{
+                display: block;
+                height: 120px;
+            }
         }
         .mi_phone_body{
+            .mi_phone_body_left{
+                >a{
+                    display: block;
+                    width: 234px;
+                    height: 614px;
+                }
+            }
             .mi_phone_body_left,.mi_phone_body_right{
                 float: left;
             }
@@ -181,6 +241,8 @@
                 margin-bottom: 14px;
                 a{
                     display: block;
+                    width: 234px;
+                    height: 300px;
                     font-size: 0;
                 }
             }

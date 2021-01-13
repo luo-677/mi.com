@@ -109,9 +109,6 @@
   left: -55px;
   background: url(../img/mi-home.png) no-repeat center;
 }
-.head_bot .content .logo:hover {
-  background-color: #ff6700;
-}
 .head_bot .content .logo:hover .logo_1 {
   left: 55px;
 }
@@ -124,18 +121,60 @@
   line-height: 100px;
   margin-left: 60px;
 }
-.head_bot .content .head_menu li {
+.head_bot .content .head_menu > li {
   float: left;
   padding: 0 10px;
 }
-.head_bot .content .head_menu li:first-child {
-  visibility: hidden;
+.head_bot .content .head_menu > li:first-child {
+  position: relative;
 }
-.head_bot .content .head_menu li a {
+.head_bot .content .head_menu > li:first-child .home-hero-ul {
+  padding: 20px 0;
+  position: absolute;
+  top: 100px;
+  left: -115px;
+  z-index: 99;
+  height: 460px;
+  box-sizing: border-box;
+  background-color: rgba(105, 101, 101, 0.6);
+}
+.head_bot .content .head_menu > li:first-child .home-hero-ul .home-hero_li {
+  height: 42px;
+  line-height: 42px;
+  width: 204px;
+  padding-left: 30px;
+}
+.head_bot .content .head_menu > li:first-child .home-hero-ul .home-hero_li:hover {
+  background-color: #ff6700;
+}
+.head_bot .content .head_menu > li:first-child .home-hero-ul li span {
+  font-size: 14px;
+  color: #fff;
+}
+.head_bot .content .head_menu > li:first-child .home-hero-ul .s_left {
+  position: absolute;
+  left: 30px;
+}
+.head_bot .content .head_menu > li:first-child .home-hero-ul .s_right {
+  position: absolute;
+  right: 20px;
+}
+.head_bot .content .head_menu > li:first-child .home-hero-ul .s_right use {
+  color: #fff !important;
+}
+.head_bot .content .head_menu > li:first-child .home-hero-ul li a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.head_bot .content .head_menu > li:first-child .home-hero-ul li:hover ~ .secsub {
+  display: block;
+}
+.head_bot .content .head_menu > li a {
   font-size: 16px;
   color: black;
 }
-.head_bot .content .head_menu li a:hover {
+.head_bot .content .head_menu > li a:hover {
   color: #ff6700;
 }
 .head_bot .content .form {

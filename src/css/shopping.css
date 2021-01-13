@@ -1,0 +1,208 @@
+body {
+  background-color: #f5f5f5;
+}
+.head_bot {
+  height: 100px;
+  padding-top: 4px;
+  border-bottom: 2px solid #ff6700;
+  background-color: #fff;
+}
+.shopping_title,
+.alarm {
+  float: left;
+  margin-top: 22px;
+}
+.shopping_title {
+  margin-left: 45px;
+  font-size: 28px;
+  color: #424242;
+  line-height: 48px;
+}
+.alarm {
+  padding: 20px 0 0 15px;
+  font-size: 12px;
+  color: #757575;
+  line-height: 20px;
+}
+.customer {
+  float: right;
+  margin-top: 22px;
+  padding: 20px 15px 0 0;
+}
+.customer a {
+  font-size: 12px;
+  color: #757575;
+}
+.customer a span {
+  color: #757575;
+  font-size: 12px;
+}
+.sp_main {
+  padding-top: 38px;
+  background-color: #f5f5f5;
+}
+.sp_main_title {
+  background-color: #fff;
+}
+.sp_main_title > div {
+  height: 70px;
+  line-height: 70px;
+  float: left;
+  color: #424242;
+}
+.sp_main_title > div:nth-of-type(1) {
+  width: 110px;
+}
+.sp_main_title > div:nth-of-type(1) .span_active {
+  background-color: #ff6700;
+}
+.sp_main_title > div:nth-of-type(1) span {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  border: 1px solid #e0e0e0;
+  vertical-align: middle;
+  margin: 0 15px 0 24px;
+  text-align: center;
+  cursor: pointer;
+}
+.sp_main_title > div:nth-of-type(1) span:hover svg {
+  visibility: visible;
+}
+.sp_main_title > div:nth-of-type(1) svg {
+  visibility: hidden;
+}
+.sp_main_title > div:nth-of-type(2) {
+  width: 120px;
+}
+.sp_main_title > div:nth-of-type(3) {
+  width: 380px;
+}
+.sp_main_title > div:nth-of-type(4) {
+  width: 140px;
+  padding-right: 18px;
+  text-align: center;
+}
+.sp_main_title > div:nth-of-type(5) {
+  width: 150px;
+  text-align: center;
+}
+.sp_main_title > div:nth-of-type(5) span {
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+}
+.sp_main_title > div:nth-of-type(5) input {
+  width: 72px;
+  height: 38px;
+  border: 1px solid ;
+}
+.sp_main_title > div:nth-of-type(6) {
+  width: 120px;
+  padding-right: 81px;
+  text-align: right;
+}
+.sp_main_title > div:nth-of-type(7) {
+  width: 80px;
+  text-align: center;
+}
+.sp_main_product {
+  border-top: 1px solid #e0e0e0;
+}
+.sp_main_product > div {
+  height: 116px;
+  line-height: 116px;
+}
+.sp_main_product > div:nth-of-type(2) {
+  font-size: 0;
+  width: 120px;
+}
+.sp_main_product > div:nth-of-type(2) img {
+  width: 80px;
+  vertical-align: middle;
+}
+.sp_main_product > div:nth-of-type(3) {
+  font-size: 18px;
+}
+.sp_main_product > div:nth-of-type(4),
+.sp_main_product > div:nth-of-type(5),
+.sp_main_product > div:nth-of-type(6) {
+  font-size: 16px;
+}
+.sp_main_product > div:nth-of-type(5) div {
+  display: inline-block;
+  border: 1px solid #e0e0e0;
+  height: 38px;
+  line-height: 38px;
+}
+.sp_main_product > div:nth-of-type(5) span {
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  cursor: pointer;
+}
+.sp_main_product > div:nth-of-type(5) input {
+  width: 72px;
+  height: 38px;
+  border: 0;
+  outline: none;
+  text-align: center;
+  color: #757575;
+}
+.sp_main_product > div:nth-of-type(6) {
+  color: #ff6700;
+}
+.sp_main_product > div:nth-of-type(7) a {
+  display: inline-block;
+  line-height: 20px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.sp_main_product > div:nth-of-type(7) a .icon {
+  font-size: 10px;
+}
+.sp_main_product > div:nth-of-type(7) a:hover {
+  background-color: #e53935;
+  color: #fff;
+}
+.car_sum {
+  height: 50px;
+  line-height: 50px;
+  margin-top: 20px;
+  background-color: #fff;
+}
+.car_sum a {
+  margin-left: 32px;
+}
+.car_sum span:nth-of-type(1) {
+  margin: 0 16px;
+}
+.car_sum span:nth-of-type(2) i {
+  color: #ff6700;
+}
+.car_sum .car_sum_right {
+  float: right;
+  line-height: 45px;
+}
+.car_sum .car_sum_right .sum_btn {
+  float: right;
+  width: 200px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 18px;
+  background-color: #ff6700;
+  color: #fff;
+  text-align: top;
+}
+.car_sum .car_sum_right .sum_price {
+  font-size: 26px;
+  color: #ff6700;
+}
+.car_sum .car_sum_right > span {
+  color: #ff6700;
+}

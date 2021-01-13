@@ -1,0 +1,198 @@
+.head_bot {
+  border-bottom: 1px solid #e0e0e0;
+}
+.head_menu .home-hero-ul {
+  display: none;
+  border: 1px solid #ff6700;
+  background-color: #fff !important;
+}
+.head_menu .home-hero-ul .s_left {
+  color: #333 !important;
+}
+.head_menu li:first-child:hover .home-hero-ul {
+  display: block;
+}
+.main .product_top {
+  height: 60px;
+  line-height: 60px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.07);
+}
+.main .product_top .top_left {
+  float: left;
+}
+.main .product_top .top_left span {
+  font-size: 18px;
+  font-weight: 400;
+  color: #424242;
+}
+.main .product_top .top_right {
+  float: right;
+}
+.main .product_top .top_right span {
+  margin: 0 7px;
+  color: #e0e0e0;
+}
+.main .product_top .top_right a {
+  color: #616161;
+}
+.main .product_top .top_right a:hover {
+  color: #ff6700;
+}
+.main > .content {
+  padding-top: 32px;
+}
+.main .img-left,
+.main .product {
+  float: left;
+}
+.main .img-left {
+  width: 606px;
+}
+.main .img-left .left_img {
+  width: 560px;
+  height: 560px;
+}
+.main .img-left .left_img img {
+  width: 100%;
+}
+.main .product {
+  width: 600px;
+  margin-left: 20px;
+}
+.main .product .pname {
+  height: 36px;
+  font-size: 24px;
+  font-weight: 400;
+  color: #212121;
+}
+.main .product .abstract {
+  padding-top: 8px;
+  line-height: 1.5;
+}
+.main .product .abstract .abstract_imp {
+  color: #ff6700;
+}
+.main .product .channel {
+  margin-top: 14px;
+  color: #ff6700;
+}
+.main .product .price {
+  padding: 12px 0 10px;
+  font-size: 18px;
+  color: #ff6700;
+}
+.main .product .price span {
+  font-size: 18px;
+  color: #ff6700;
+}
+.main .product .line {
+  margin-top: 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.main .product .address-box {
+  margin: 20px 0;
+  border: 1px solid #e0e0e0;
+  padding: 30px 50px;
+}
+.main .product .address-box span {
+  margin-right: 14px;
+  color: #333;
+}
+.main .product .address-box .modify {
+  color: #ff6700;
+}
+.main .product .address-box div:nth-of-type(2) span {
+  color: #ff6700;
+}
+.main .product .version_title {
+  font-size: 18px;
+  color: #333;
+}
+.main .product .version_list {
+  margin-bottom: 30px;
+}
+.main .product .version_list li {
+  cursor: pointer;
+  width: 290px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #e0e0e0;
+  float: left;
+  margin: 10px 12px 0 0;
+  text-align: center;
+  font-size: 16px;
+  color: #757575;
+  transition: border-color 0.3s, color 0.3s;
+}
+.main .product .version_list li:first-child {
+  border-color: #ff6700;
+  color: #ff6700;
+}
+.main .product .version_list li:nth-of-type(2n) {
+  margin-right: 0;
+}
+.main .product .version_list li:hover {
+  border-color: #ff6700;
+  color: #ff6700;
+}
+.main .product .select_sum {
+  padding: 30px;
+  margin-bottom: 30px;
+  background-color: #f9f9fa !important;
+}
+.main .product .select_sum .select_sum_top span {
+  color: #757575;
+}
+.main .product .select_sum .select_sum_top .p_left {
+  float: left;
+}
+.main .product .select_sum .select_sum_top .p_left span {
+  margin-right: 5px;
+}
+.main .product .select_sum .select_sum_top .p_right {
+  float: right;
+}
+.main .product .select_sum .select_sum_bot {
+  padding-top: 20px;
+  color: #ff6700;
+  font-size: 24px;
+}
+.main .product .select_sum .select_sum_bot .price_sum {
+  font-size: 24px;
+  color: #ff6700;
+}
+.main .product .btn_box {
+  margin-bottom: 20px;
+}
+.main .product .btn_box > div {
+  cursor: pointer;
+  float: left;
+  text-align: center;
+  line-height: 52px;
+  font-size: 16px;
+  color: #fff;
+  transition: background-color 0.4s, border-color 0.4s;
+}
+.main .product .btn_box .bnt {
+  width: 298px;
+  height: 52px;
+  margin-right: 10px;
+  background-color: #ff6700;
+  border-color: #ff6700;
+}
+.main .product .btn_box .bnt:hover {
+  background-color: #f25807;
+  border-color: #f25807;
+}
+.main .product .btn_box .love {
+  width: 140px;
+  height: 52px;
+  background-color: #b0b0b0;
+  border-color: #b0b0b0;
+}
+.main .product .btn_box .love:hover {
+  background-color: #757575;
+  border-color: #757575;
+}

@@ -4,11 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mi</title>
+    <title>小米商城</title>
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+    <link rel="bookmark" href="../img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/body.css">
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -18,12 +22,12 @@
             <div class="content clear">
                 <div class="head_left">
                     <a href="#">小米商城</a><span>|</span><a href="#">MIUI</a><span>|</span><a href="#">IoT</a><span>|</span><a href="#">云服务</a><span>|</span><a href="#">天星数科</a><span>|</span><a href="#">有品</a><span>|</span><a href="#">小爱开放平台</a><span>|</span>
-                    <a href="#">企业团购</a><span>|</span><a href="#">资质证照</a><span>|</span><a href="#">协议规则</a><span>|</span><a href="#" class="head_code">下载app<div class="triangle"></div><div class="code_box"><img src="../img/nav_code.png" alt=""><p>小米商城APP</p></div></a><span>|</span>
+                    <a href="#">企业团购</a><span>|</span><a href="#">资质证照</a><span>|</span><a href="#">协议规则</a><span>|</span><a href="#" class="head_code">下载app<div class="triangle"></div><div class="code_box"><img class="lazy" data-original="../img/nav_code.png" alt=""><p>小米商城APP</p></div></a><span>|</span>
                     <a href="#">智能生活</a><span>|</span>
                     <a href="#">Select Location</a>
                 </div>
                 <div class="head_right">
-                    <a href="#">登录</a><span>|</span><a href="#">注册</a><span>|</span><a href="#">消息通知</a><i href="#" class="shopping">购物车<span>(<em>0</em>)</span><div class="shopping_box"></div></i>
+                    <a href="../html/login.html">登录</a><span>|</span><a href="../html/reg.html">注册</a><span>|</span><a href="#">消息通知</a><i href="#" class="shopping">购物车<span>(<em>0</em>)</span><div class="shopping_box"></div></i>
                 </div>
             </div>
         </div>
@@ -36,7 +40,60 @@
                     </div>
                 </a>
                 <ul class="head_menu clear">
-                    <li><a href="#">全部商品分类</a></li>
+                    <li><a href="#" style="visibility: hidden;">全部商品分类</a>
+                        <ul class="home-hero-ul">
+                            <li class="home-hero_li">
+                                <a href="#">
+                                    <span class="s_left">手机 电话卡</span><span class="s_right"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-jiantou"></use></svg></span>
+                                </a>
+                            </li>
+                            <li class="home-hero_li">
+                                <a href="#">
+                                    <span class="s_left">电视 盒子</span><span class="s_right"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-jiantou"></use></svg></span>
+                                </a>
+                            </li>
+                            <li class="home-hero_li">
+                                <a href="#">
+                                    <span class="s_left">笔记本 显示器</span><span class="s_right"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-jiantou"></use></svg></span>
+                                </a>
+                            </li>
+                            <li class="home-hero_li">
+                                <a href="#">
+                                    <span class="s_left">家电 插线板</span><span class="s_right"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-jiantou"></use></svg></span>
+                                </a>
+                            </li>
+                            <li class="home-hero_li">
+                                <a href="#">
+                                    <span class="s_left">出行 穿戴</span><span class="s_right"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-jiantou"></use></svg></span>
+                                </a>
+                            </li>
+                            <li class="home-hero_li">
+                                <a href="#">
+                                    <span class="s_left">智能 路由器</span><span class="s_right"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-jiantou"></use></svg></span>
+                                </a>
+                            </li>
+                            <li class="home-hero_li">
+                                <a href="#">
+                                    <span class="s_left">电源 配件</span><span class="s_right"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-jiantou"></use></svg></span>
+                                </a>
+                            </li>
+                            <li class="home-hero_li">
+                                <a href="#">
+                                    <span class="s_left">健康 儿童</span><span class="s_right"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-jiantou"></use></svg></span>
+                                </a>
+                            </li>
+                            <li class="home-hero_li">
+                                <a href="#">
+                                    <span class="s_left">耳机 音箱</span><span class="s_right"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-jiantou"></use></svg></span>
+                                </a>
+                            </li>
+                            <li class="home-hero_li">
+                                <a href="#">
+                                    <span class="s_left">生活 箱包</span><span class="s_right"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-jiantou"></use></svg></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                     <li><a href="#">小米手机</a></li>
                     <li><a href="#">Redmi红米</a></li>
                     <li><a href="#">电视</a></li>
@@ -56,24 +113,66 @@
     <div id="home_here">
         <div class="content clear">
             <div class="carousel">
-                <div class="carousel_img1 carousel_img"></div>
-                <div class="carousel_img2 carousel_img"></div>
-                <div class="carousel_img3 carousel_img"></div>
-                <div class="carousel_img4 carousel_img"></div>
-                <div class="carousel_btn carousel_btn_1"></div>
-                <div class="carousel_btn carousel_btn_2"></div>
-                <div class="carousel_nav">
-                    <span class="carousel_nav_1"></span>
-                    <span class="carousel_nav_2"></span>
-                    <span class="carousel_nav_3"></span>
-                    <span class="carousel_nav_4"></span>
+                <!-- Swiper -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(../img/bg1.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(../img/bg2.webp)"></div>
+                        <div class="swiper-slide" style="background-image:url(../img/bg3.webp)"></div>
+                        <div class="swiper-slide" style="background-image:url(../img/bg4.webp)"></div>
+                        <div class="swiper-slide" style="background-image:url(../img/bg5.webp)"></div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination swiper-pagination-white" style="text-align: right; padding-right: 40px; box-sizing: border-box;"></div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next swiper-button-white"></div>
+                    <div class="swiper-button-prev swiper-button-white" style="left: 246px;"></div>
                 </div>
             </div>
             <div class="carousel_nemu clear">
-                <div class="carousel_nemu_1"></div>
-                <div class="carousel_nemu_2 carousel_nemu_same"></div>
-                <div class="carousel_nemu_3 carousel_nemu_same"></div>
-                <div class="carousel_nemu_4 carousel_nemu_same"></div>
+                <div class="carousel_nemu_1 clear">
+                    <ul class="home-hero_2_ul clear">
+                        <li>
+                            <a href="#" class="a1">
+                                <img src="../img/bb.png" alt="">以旧换新
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="a1">
+                                <img src="../img/bb.png" alt="">以旧换新
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="a1">
+                                <img src="../img/bb.png" alt="">以旧换新
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="a1">
+                                <img src="../img/bb.png" alt="">以旧换新
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="a1">
+                                <img src="../img/bb.png" alt="">以旧换新
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="a1">
+                                <img src="../img/bb.png" alt="">以旧换新
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="carousel_nemu_2 carousel_nemu_same">
+                    <a href="#"><img src="../img/carousel_nemu_2.jpg" alt=""></a>
+                </div>
+                <div class="carousel_nemu_3 carousel_nemu_same">
+                    <a href="#"><img src="../img/carousel_nemu_3.jpg" alt=""></a>
+                </div>
+                <div class="carousel_nemu_4 carousel_nemu_same">
+                    <a href="#"><img src="../img/carousel_nemu_4.jpg" alt=""></a>
+                </div>
             </div>
         </div>
     </div>
@@ -86,7 +185,7 @@
                 <div class="seckill clear">
                     <div class="seckill_left">
                         <p class="seckill_time"><span>14:00</span>场</p>
-                        <img src="../img/seckill.jpg" alt="" class="seckill_logo">
+                        <img class="lazy" data-original="../img/seckill.jpg" alt="" class="seckill_logo">
                         <p class="seckill_stop">距离结束还有</p>
                         <div class="count_down">
                             <div class="count_down_box clear"><span>h</span><em>:</em><span>m</span><em>:</em><span>s</span></div>
@@ -97,7 +196,7 @@
                             <li>
                                 <a href="#">
                                     <div class="seckill_img">
-                                        <img src="../img/thing.webp" alt="">
+                                        <img class="lazy" data-original="../img/thing.webp" alt="">
                                     </div>
                                     <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                     <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -109,7 +208,7 @@
                             <li>
                                 <a href="#">
                                     <div class="seckill_img">
-                                        <img src="../img/thing.webp" alt="">
+                                        <img class="lazy" data-original="../img/thing.webp" alt="">
                                     </div>
                                     <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                     <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -121,7 +220,7 @@
                             <li>
                                 <a href="#">
                                     <div class="seckill_img">
-                                        <img src="../img/thing.webp" alt="">
+                                        <img class="lazy" data-original="../img/thing.webp" alt="">
                                     </div>
                                     <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                     <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -133,7 +232,7 @@
                             <li>
                                 <a href="#">
                                     <div class="seckill_img">
-                                        <img src="../img/thing.webp" alt="">
+                                        <img class="lazy" data-original="../img/thing.webp" alt="">
                                     </div>
                                     <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                     <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -145,7 +244,7 @@
                             <li>
                                 <a href="#">
                                     <div class="seckill_img">
-                                        <img src="../img/thing.webp" alt="">
+                                        <img class="lazy" data-original="../img/thing.webp" alt="">
                                     </div>
                                     <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                     <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -157,7 +256,7 @@
                             <li>
                                 <a href="#">
                                     <div class="seckill_img">
-                                        <img src="../img/thing.webp" alt="">
+                                        <img class="lazy" data-original="../img/thing.webp" alt="">
                                     </div>
                                     <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                     <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -169,7 +268,7 @@
                             <li>
                                 <a href="#">
                                     <div class="seckill_img">
-                                        <img src="../img/thing.webp" alt="">
+                                        <img class="lazy" data-original="../img/thing.webp" alt="">
                                     </div>
                                     <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                     <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -181,7 +280,7 @@
                             <li>
                                 <a href="#">
                                     <div class="seckill_img">
-                                        <img src="../img/thing.webp" alt="">
+                                        <img class="lazy" data-original="../img/thing.webp" alt="">
                                     </div>
                                     <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                     <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -197,7 +296,7 @@
             <div class="mi_phone_box">
                 <div class="mi_phone_topad">
                     <a href="#">
-                        <img src="../img/miphone_top.webp" alt="">
+                        <img class="lazy" data-original="../img/miphone_top.webp" alt="">
                     </a>
                 </div>
                 <div class="mi_phone_body">
@@ -207,109 +306,13 @@
                     <div class="clear">
                         <div class="mi_phone_body_left">
                             <a href="#">
-                                <img src="../img/phone_left.webp" alt="">
+                                <img class="lazy" data-original="../img/phone_left.webp" alt="">
                             </a>
                         </div>
-                        <ul class="mi_phone_body_right">
+                        <ul class="mi_phone_body_right miphone">
                             <div class="mpb_right_top">
-                                <div>
-                                    <a href="#">
-                                        <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
-                                        </div>
-                                        <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
-                                        <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
-                                        <div class="price">
-                                            <span>179元</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="#">
-                                        <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
-                                        </div>
-                                        <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
-                                        <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
-                                        <div class="price">
-                                            <span>179元</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="#">
-                                        <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
-                                        </div>
-                                        <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
-                                        <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
-                                        <div class="price">
-                                            <span>179元</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="#">
-                                        <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
-                                        </div>
-                                        <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
-                                        <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
-                                        <div class="price">
-                                            <span>179元</span>
-                                        </div>
-                                    </a>
-                                </div>
                             </div>
                             <div class="mpb_right_bot">
-                                <div>
-                                    <a href="#">
-                                        <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
-                                        </div>
-                                        <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
-                                        <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
-                                        <div class="price">
-                                            <span>179元</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="#">
-                                        <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
-                                        </div>
-                                        <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
-                                        <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
-                                        <div class="price">
-                                            <span>179元</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="#">
-                                        <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
-                                        </div>
-                                        <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
-                                        <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
-                                        <div class="price">
-                                            <span>179元</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="#">
-                                        <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
-                                        </div>
-                                        <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
-                                        <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
-                                        <div class="price">
-                                            <span>179元</span>
-                                        </div>
-                                    </a>
-                                </div>
                             </div>
                         </ul>
                     </div>
@@ -318,7 +321,7 @@
             <div class="mi_phone_box mi_appliances_box">
                 <div class="mi_phone_topad">
                     <a href="#">
-                        <img src="../img/miphone_top.webp" alt="">
+                        <img class="lazy" data-original="../img/miphone_top.webp" alt="">
                     </a>
                 </div>
                 <div class="mi_phone_body">
@@ -329,12 +332,12 @@
                         <div class="mi_phone_body_left">
                             <div>
                                 <a href="#">
-                                    <img src="../img/jd_left.webp" alt="">
+                                    <img class="lazy" data-original="../img/jd_left.webp" alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="#">
-                                    <img src="../img/jd_left.webp" alt="">
+                                    <img class="lazy" data-original="../img/jd_left.webp" alt="">
                                 </a>
                             </div>
                         </div>
@@ -343,7 +346,7 @@
                                 <div>
                                     <a href="#">
                                         <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
+                                            <img class="lazy" data-original="../img/thing.webp" alt="">
                                         </div>
                                         <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                         <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -355,7 +358,7 @@
                                 <div>
                                     <a href="#">
                                         <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
+                                            <img class="lazy" data-original="../img/thing.webp" alt="">
                                         </div>
                                         <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                         <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -367,7 +370,7 @@
                                 <div>
                                     <a href="#">
                                         <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
+                                            <img class="lazy" data-original="../img/thing.webp" alt="">
                                         </div>
                                         <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                         <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -379,7 +382,7 @@
                                 <div>
                                     <a href="#">
                                         <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
+                                            <img class="lazy" data-original="../img/thing.webp" alt="">
                                         </div>
                                         <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                         <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -393,7 +396,7 @@
                                 <div>
                                     <a href="#">
                                         <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
+                                            <img class="lazy" data-original="../img/thing.webp" alt="">
                                         </div>
                                         <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                         <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -405,7 +408,7 @@
                                 <div>
                                     <a href="#">
                                         <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
+                                            <img class="lazy" data-original="../img/thing.webp" alt="">
                                         </div>
                                         <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                         <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -417,7 +420,7 @@
                                 <div>
                                     <a href="#">
                                         <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
+                                            <img class="lazy" data-original="../img/thing.webp" alt="">
                                         </div>
                                         <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                         <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -431,7 +434,7 @@
                                         <a href="#">
                                             <h3>米家互联网烟灶套装（天然气）</h3>
                                             <p><span>2298</span>元</p>
-                                            <img src="../img/small.webp" alt="">
+                                            <img class="lazy" data-original="../img/small.webp" alt="">
                                         </a>
                                     </div>
                                     <div class="last2_boxbot">
@@ -449,7 +452,7 @@
             <div class="mi_phone_box mi_appliances_box">
                 <div class="mi_phone_topad">
                     <a href="#">
-                        <img src="../img/miphone_top.webp" alt="">
+                        <img class="lazy" data-original="../img/miphone_top.webp" alt="">
                     </a>
                 </div>
                 <div class="mi_phone_body">
@@ -460,12 +463,12 @@
                         <div class="mi_phone_body_left">
                             <div>
                                 <a href="#">
-                                    <img src="../img/jd_left.webp" alt="">
+                                    <img class="lazy" data-original="../img/jd_left.webp" alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="#">
-                                    <img src="../img/jd_left.webp" alt="">
+                                    <img class="lazy" data-original="../img/jd_left.webp" alt="">
                                 </a>
                             </div>
                         </div>
@@ -474,7 +477,7 @@
                                 <div>
                                     <a href="#">
                                         <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
+                                            <img class="lazy" data-original="../img/thing.webp" alt="">
                                         </div>
                                         <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                         <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -486,7 +489,7 @@
                                 <div>
                                     <a href="#">
                                         <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
+                                            <img class="lazy" data-original="../img/thing.webp" alt="">
                                         </div>
                                         <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                         <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -498,7 +501,7 @@
                                 <div>
                                     <a href="#">
                                         <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
+                                            <img class="lazy" data-original="../img/thing.webp" alt="">
                                         </div>
                                         <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                         <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -510,7 +513,7 @@
                                 <div>
                                     <a href="#">
                                         <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
+                                            <img class="lazy" data-original="../img/thing.webp" alt="">
                                         </div>
                                         <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                         <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -524,7 +527,7 @@
                                 <div>
                                     <a href="#">
                                         <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
+                                            <img class="lazy" data-original="../img/thing.webp" alt="">
                                         </div>
                                         <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                         <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -536,7 +539,7 @@
                                 <div>
                                     <a href="#">
                                         <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
+                                            <img class="lazy" data-original="../img/thing.webp" alt="">
                                         </div>
                                         <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                         <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -548,7 +551,7 @@
                                 <div>
                                     <a href="#">
                                         <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
+                                            <img class="lazy" data-original="../img/thing.webp" alt="">
                                         </div>
                                         <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                         <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -562,7 +565,7 @@
                                         <a href="#">
                                             <h3>米家互联网烟灶套装（天然气）</h3>
                                             <p><span>2298</span>元</p>
-                                            <img src="../img/small.webp" alt="">
+                                            <img class="lazy" data-original="../img/small.webp" alt="">
                                         </a>
                                     </div>
                                     <div class="last2_boxbot">
@@ -580,7 +583,7 @@
             <div class="mi_phone_box mi_appliances_box">
                 <div class="mi_phone_topad">
                     <a href="#">
-                        <img src="../img/miphone_top.webp" alt="">
+                        <img class="lazy" data-original="../img/miphone_top.webp" alt="">
                     </a>
                 </div>
                 <div class="mi_phone_body">
@@ -591,12 +594,12 @@
                         <div class="mi_phone_body_left">
                             <div>
                                 <a href="#">
-                                    <img src="../img/jd_left.webp" alt="">
+                                    <img class="lazy" data-original="../img/jd_left.webp" alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="#">
-                                    <img src="../img/jd_left.webp" alt="">
+                                    <img class="lazy" data-original="../img/jd_left.webp" alt="">
                                 </a>
                             </div>
                         </div>
@@ -605,7 +608,7 @@
                                 <div>
                                     <a href="#">
                                         <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
+                                            <img class="lazy" data-original="../img/thing.webp" alt="">
                                         </div>
                                         <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                         <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -617,7 +620,7 @@
                                 <div>
                                     <a href="#">
                                         <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
+                                            <img class="lazy" data-original="../img/thing.webp" alt="">
                                         </div>
                                         <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                         <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -629,7 +632,7 @@
                                 <div>
                                     <a href="#">
                                         <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
+                                            <img class="lazy" data-original="../img/thing.webp" alt="">
                                         </div>
                                         <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                         <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -641,7 +644,7 @@
                                 <div>
                                     <a href="#">
                                         <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
+                                            <img class="lazy" data-original="../img/thing.webp" alt="">
                                         </div>
                                         <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                         <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -655,7 +658,7 @@
                                 <div>
                                     <a href="#">
                                         <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
+                                            <img class="lazy" data-original="../img/thing.webp" alt="">
                                         </div>
                                         <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                         <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -667,7 +670,7 @@
                                 <div>
                                     <a href="#">
                                         <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
+                                            <img class="lazy" data-original="../img/thing.webp" alt="">
                                         </div>
                                         <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                         <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -679,7 +682,7 @@
                                 <div>
                                     <a href="#">
                                         <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
+                                            <img class="lazy" data-original="../img/thing.webp" alt="">
                                         </div>
                                         <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                         <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -693,7 +696,7 @@
                                         <a href="#">
                                             <h3>米家互联网烟灶套装（天然气）</h3>
                                             <p><span>2298</span>元</p>
-                                            <img src="../img/small.webp" alt="">
+                                            <img class="lazy" data-original="../img/small.webp" alt="">
                                         </a>
                                     </div>
                                     <div class="last2_boxbot">
@@ -711,7 +714,7 @@
             <div class="mi_phone_box mi_appliances_box">
                 <div class="mi_phone_topad">
                     <a href="#">
-                        <img src="../img/miphone_top.webp" alt="">
+                        <img class="lazy" data-original="../img/miphone_top.webp" alt="">
                     </a>
                 </div>
                 <div class="mi_phone_body">
@@ -722,12 +725,12 @@
                         <div class="mi_phone_body_left">
                             <div>
                                 <a href="#">
-                                    <img src="../img/jd_left.webp" alt="">
+                                    <img class="lazy" data-original="../img/jd_left.webp" alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="#">
-                                    <img src="../img/jd_left.webp" alt="">
+                                    <img class="lazy" data-original="../img/jd_left.webp" alt="">
                                 </a>
                             </div>
                         </div>
@@ -736,7 +739,7 @@
                                 <div>
                                     <a href="#">
                                         <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
+                                            <img class="lazy" data-original="../img/thing.webp" alt="">
                                         </div>
                                         <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                         <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -748,7 +751,7 @@
                                 <div>
                                     <a href="#">
                                         <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
+                                            <img class="lazy" data-original="../img/thing.webp" alt="">
                                         </div>
                                         <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                         <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -760,7 +763,7 @@
                                 <div>
                                     <a href="#">
                                         <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
+                                            <img class="lazy" data-original="../img/thing.webp" alt="">
                                         </div>
                                         <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                         <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -772,7 +775,7 @@
                                 <div>
                                     <a href="#">
                                         <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
+                                            <img class="lazy" data-original="../img/thing.webp" alt="">
                                         </div>
                                         <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                         <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -786,7 +789,7 @@
                                 <div>
                                     <a href="#">
                                         <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
+                                            <img class="lazy" data-original="../img/thing.webp" alt="">
                                         </div>
                                         <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                         <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -798,7 +801,7 @@
                                 <div>
                                     <a href="#">
                                         <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
+                                            <img class="lazy" data-original="../img/thing.webp" alt="">
                                         </div>
                                         <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                         <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -810,7 +813,7 @@
                                 <div>
                                     <a href="#">
                                         <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
+                                            <img class="lazy" data-original="../img/thing.webp" alt="">
                                         </div>
                                         <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                         <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -824,7 +827,7 @@
                                         <a href="#">
                                             <h3>米家互联网烟灶套装（天然气）</h3>
                                             <p><span>2298</span>元</p>
-                                            <img src="../img/small.webp" alt="">
+                                            <img class="lazy" data-original="../img/small.webp" alt="">
                                         </a>
                                     </div>
                                     <div class="last2_boxbot">
@@ -842,7 +845,7 @@
             <div class="mi_phone_box mi_appliances_box">
                 <div class="mi_phone_topad">
                     <a href="#">
-                        <img src="../img/miphone_top.webp" alt="">
+                        <img class="lazy" data-original="../img/miphone_top.webp" alt="">
                     </a>
                 </div>
                 <div class="mi_phone_body">
@@ -853,12 +856,12 @@
                         <div class="mi_phone_body_left">
                             <div>
                                 <a href="#">
-                                    <img src="../img/jd_left.webp" alt="">
+                                    <img class="lazy" data-original="../img/jd_left.webp" alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="#">
-                                    <img src="../img/jd_left.webp" alt="">
+                                    <img class="lazy" data-original="../img/jd_left.webp" alt="">
                                 </a>
                             </div>
                         </div>
@@ -867,7 +870,7 @@
                                 <div>
                                     <a href="#">
                                         <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
+                                            <img class="lazy" data-original="../img/thing.webp" alt="">
                                         </div>
                                         <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                         <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -879,7 +882,7 @@
                                 <div>
                                     <a href="#">
                                         <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
+                                            <img class="lazy" data-original="../img/thing.webp" alt="">
                                         </div>
                                         <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                         <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -891,7 +894,7 @@
                                 <div>
                                     <a href="#">
                                         <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
+                                            <img class="lazy" data-original="../img/thing.webp" alt="">
                                         </div>
                                         <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                         <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -903,7 +906,7 @@
                                 <div>
                                     <a href="#">
                                         <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
+                                            <img class="lazy" data-original="../img/thing.webp" alt="">
                                         </div>
                                         <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                         <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -917,7 +920,7 @@
                                 <div>
                                     <a href="#">
                                         <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
+                                            <img class="lazy" data-original="../img/thing.webp" alt="">
                                         </div>
                                         <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                         <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -929,7 +932,7 @@
                                 <div>
                                     <a href="#">
                                         <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
+                                            <img class="lazy" data-original="../img/thing.webp" alt="">
                                         </div>
                                         <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                         <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -941,7 +944,7 @@
                                 <div>
                                     <a href="#">
                                         <div class="seckill_img">
-                                            <img src="../img/thing.webp" alt="">
+                                            <img class="lazy" data-original="../img/thing.webp" alt="">
                                         </div>
                                         <h3>HITH智能足浴器Q3 有线版 旋钮款 旋钮款</h3>
                                         <p class="seckill_p">D舒适按摩，精准恒温足浴</p>
@@ -955,7 +958,7 @@
                                         <a href="#">
                                             <h3>米家互联网烟灶套装（天然气）</h3>
                                             <p><span>2298</span>元</p>
-                                            <img src="../img/small.webp" alt="">
+                                            <img class="lazy" data-original="../img/small.webp" alt="">
                                         </a>
                                     </div>
                                     <div class="last2_boxbot">
@@ -973,7 +976,7 @@
             <div class="mi_phone_box mi_appliances_box">
                 <div class="mi_phone_topad">
                     <a href="#">
-                        <img src="../img/miphone_top.webp" alt="">
+                        <img class="lazy" data-original="../img/miphone_top.webp" alt="">
                     </a>
                 </div>
                 <div class="mi_phone_body">
@@ -983,28 +986,28 @@
                     <div class="clear vedio">
                         <div>
                             <a href="#">
-                                <img src="../img/vedio.webp" alt="">
+                                <img class="lazy" data-original="../img/vedio.webp" alt="">
                                 <h3>Redmi 10X系列发布会</h3>
                                 <p>Redmi 10X系列发布会</p>
                             </a>
                         </div>
                         <div>
                             <a href="#">
-                                <img src="../img/vedio.webp" alt="">
+                                <img class="lazy" data-original="../img/vedio.webp" alt="">
                                 <h3>Redmi 10X系列发布会</h3>
                                 <p>Redmi 10X系列发布会</p>
                             </a>
                         </div>
                         <div>
                             <a href="#">
-                                <img src="../img/vedio.webp" alt="">
+                                <img class="lazy" data-original="../img/vedio.webp" alt="">
                                 <h3>Redmi 10X系列发布会</h3>
                                 <p>Redmi 10X系列发布会</p>
                             </a>
                         </div>
                         <div>
                             <a href="#">
-                                <img src="../img/vedio.webp" alt="">
+                                <img class="lazy" data-original="../img/vedio.webp" alt="">
                                 <h3>Redmi 10X系列发布会</h3>
                                 <p>Redmi 10X系列发布会</p>
                             </a>
@@ -1075,5 +1078,27 @@
         </div>
     </div>
 </body>
+
+<script src="../js/index.js" type="module"></script>
+<script src="../js/lazyload.js" type="module"></script>
+<script src="../font/iconfont.js"></script>
+<script src="../js/library/swiper-bundle.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: true,
+        spaceBetween: 30,
+        effect: 'fade',
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>
 
 </html>

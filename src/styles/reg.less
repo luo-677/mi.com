@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+body{
+    background-color: #f9f9f9;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.icon{
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+@mi-color:#ff6700;
+#reg{
+    box-sizing: content-box;
+}
+.wrap{
+    height: 530px;
+    background-color: #fff;
+    width: 854px;
+    margin: 150px auto 0;
+    padding: 0 0 30px;
+    .reglogo,h4,.reg_footer{
+        text-align: center;
+    }
+    .reglogo{
+        font-size: 0;
+        padding-bottom: 40px;
+    }
+    h4{
+        font-size: 30px;
+        font-weight: normal;
+    }
+    .regbox{
+        width: 332px;
+        padding: 30px;
+        margin: 0 auto;
+        .city{
+            cursor: pointer;
+            height: 40px;
+            padding-left: 15px;
+            border: 1px solid #e8e8e8;
+            box-sizing: border-box;
+            margin-bottom: 8px;
+            clear: both;
+            .city_value{
+                width: 275px;
+                line-height: 38px;
+                border-right: 1px solid #e8e8e8;
+                float: left;
+            }
+            .city_logo{
+                float: left;
+                width: 39px;
+                height: 38px;
+                line-height: 38px;
+                text-align: center;
+                color: #e8e8e8;
+                .icon{
+                    font-size: 20px;
+                    vertical-align: middle;
+                }
+            }
+        }
+        h5{
+            font-weight: normal;
+        }
+        h5:nth-of-type(1),h5:nth-of-type(3){
+            padding-bottom: 5px;
+        }
+        h5:nth-of-type(2){
+            margin-bottom: 15px;
+        }
+        .phone_select{
+            height: 40px;
+            padding-bottom: 10px;
+            .phone_head{
+                float: left;
+                width: 72px;
+                box-sizing: border-box;
+                border: 1px solid #e8e8e8;
+                border-right: none;
+                line-height: 38px;
+                text-align: center;
+                height: 40px;
+                cursor: pointer;
+                span:nth-of-type(1){
+                    line-height: 40px;
+                    margin-right: 10px;
+                }
+            }
+            input{
+                height: 100%;
+                box-sizing: border-box;
+                border: 1px solid #e8e8e8;
+                width: 260px;
+                padding: 10px;
+                outline: none;
+            }
+        }
+        .reg_alarm{
+            display: none;
+            img,span{
+                vertical-align: middle;
+            }
+            span{
+                color: #f66;
+                font-size: 14px;
+            } 
+        }
+        .reg_btn{
+            text-align: center;
+            height: 40px;
+            line-height: 40px;
+            border: 1px solid rgba(186,186,186,.3);
+            background-color: @mi-color;
+            font-size: 14px;
+            color: #fff;
+            margin-top: 15px;
+            cursor: pointer;
+            &:hover{
+                background-color: #ff936a;
+            }
+        }
+    }
+    .reg_footer{
+        padding-top: 40px;
+        margin: 10px 0;
+        p{
+            color: #9d9d9d;
+            a{
+                font-weight: bold;
+            }
+        }
+    }
+}
+#footer{
+    width: 100%;
+    height: 80px;
+    margin-top: 145px;
+    p{
+        min-width: 854px;
+        text-align: center;
+        >a{
+            padding: 0 10px;
+        }
+        &:nth-of-type(1){
+            *{
+                color: #757575
+            }
+            a{
+                &:first-child{
+                    color: #333;
+                }
+                &:hover{
+                    color: #333;
+                }
+            }
+        }
+        &:nth-of-type(2){
+            padding: 10px 0;
+            span{
+                color: #9d9d9d;
+                a{
+                    color: #9d9d9d;
+                }
+            };
+        }
+    }
+}
