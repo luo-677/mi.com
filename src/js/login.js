@@ -1,9 +1,7 @@
 import '../js/library/jquery.js';
-// import '../js/library/cookie';
+import { cookie } from '../js/library/cookie.js';
 
 $('.login_btn_box').on('click', function() {
-    // console.log($('#username').val());
-    // console.log($('#password').val());
     $.ajax({
         type: "get",
         url: `../../interface/login.php?username=${$('#username').val()}&password=${$('#password').val()}`,
@@ -11,9 +9,9 @@ $('.login_btn_box').on('click', function() {
         success: function(response) {
             if (response === "1") {
                 alert("登陆成功");
-                // document.cookie = `username=${$('#username').val()}`;
-                // document.cookie = `password=${$('#password').val()}`;
-                cookie.set("password", $('#password').val());
+                location.href = "../html/index.html";
+                cookie.set("username", $('#username').val());
+                cookie.set("status", "true");
             }
         }
     });

@@ -126,14 +126,14 @@
   color: #757575;
   transition: border-color 0.3s, color 0.3s;
 }
-.main .product .version_list li:first-child {
-  border-color: #ff6700;
-  color: #ff6700;
-}
 .main .product .version_list li:nth-of-type(2n) {
   margin-right: 0;
 }
 .main .product .version_list li:hover {
+  border-color: #ff6700;
+  color: #ff6700;
+}
+.main .product .version_list .active {
   border-color: #ff6700;
   color: #ff6700;
 }

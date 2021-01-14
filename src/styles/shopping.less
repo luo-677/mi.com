@@ -61,7 +61,8 @@ body{
                 vertical-align: middle;
                 margin: 0 15px 0 24px;
                 text-align: center;
-                cursor: pointer;
+                -webkit-user-select: none;
+                user-select:none;
                 &:hover{
                     svg{
                         visibility: visible;
@@ -69,7 +70,13 @@ body{
                 }
             }
             svg{
+                visibility: visible;
+                background-color: #ff6700;
+                cursor: pointer;
+            }
+            .svg_hide{
                 visibility: hidden;
+                background-color: transparent;
             }
         }
         &:nth-of-type(2){
@@ -82,6 +89,10 @@ body{
             width: 140px;
             padding-right: 18px;
             text-align: center;
+            .single{
+                color: #424242 !important;
+                font-size: 16px !important;
+            }
         }
         &:nth-of-type(5){
             width: 150px;
@@ -102,6 +113,10 @@ body{
             width: 120px;
             padding-right: 81px;
             text-align: right;
+            .single_sum{
+                color: #ff6700 !important;
+                font-size: 16px !important;
+            }
         }
         &:nth-of-type(7){
             width: 80px;
@@ -141,6 +156,8 @@ body{
                 height: 38px;
                 line-height: 38px;
                 cursor: pointer;
+                -webkit-user-select: none;
+                user-select:none;
             }
             input{
                 width: 72px;
@@ -211,6 +228,40 @@ body{
         }
         >span{
             color: #ff6700;
+        }
+    }
+}
+.empty_shopping{
+    height: 273px;
+    color: #b0b0b0;
+    line-height: 1.5;
+    padding-left: 558px;
+    margin: 65px 0 130px;
+    overflow: hidden;
+    background: url(../img/cart-empty.png) no-repeat 124px 0;
+    h2{
+        margin-top: 70px;
+        font-size: 36px;
+    }
+    p{
+        font-size: 20px;
+    }
+    .empty_btn{
+        a{
+            display: inline-block;
+            width: 170px;
+            height: 48px;
+            line-height: 48px;
+            margin: 20px 10px 0 0;
+            text-align: center;
+            border: 1px solid #ff6700;
+            &:nth-of-type(1){
+                background-color: #ff6700;
+                color: #fff;
+            }
+            &:nth-of-type(2){
+                color: #ff6700;
+            }
         }
     }
 }
