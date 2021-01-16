@@ -1,6 +1,5 @@
 import '../js/library/jquery.js';
 import { cookie } from '../js/library/cookie.js';
-// console.log(cookie.get("status"));
 if (cookie.get("status") === "true") {
     let username = cookie.get("username");
     let tmp = `<div class="head_right">
@@ -18,7 +17,6 @@ $.ajax({
     success: function(response) {
         let temptop = "";
         let top = response.slice(0, 4);
-        // console.log(top);
         top.forEach((elm, i) => {
             let abst = JSON.parse(elm.abstract);
             let picture = JSON.parse(elm.pic_addr);

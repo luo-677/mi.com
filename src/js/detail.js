@@ -32,8 +32,6 @@ function addItem(name, price, version, color, img, num = 1) {
             shop.forEach(el => {
                 el.name == name && el.version == version && el.color == color ? el.num++ : null;
             });
-            // el.num++;
-            // console.log(1);
         } else {
             shop.push(product);
         }
