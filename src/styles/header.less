@@ -1,5 +1,6 @@
 @mi-color:#ff6700;
 .head_top{
+    width: 100%;
     height: 40px;
     line-height: 40px;
     background-color: #333333;
@@ -64,6 +65,7 @@
             background-color: #424242;
             margin-left: 25px;
             position: relative;
+            cursor: pointer;
             // transition: background-color 4.2s,color .2s;
             &:hover{
                 background-color: #fff;
@@ -85,9 +87,11 @@
             }
         }
     }
+    
 }
 .head_bot{
     .content{
+        position: relative;
         .logo{
             position: relative;
             margin-top: 22px;
@@ -127,6 +131,7 @@
             height: 100px;
             line-height: 100px;
             margin-left: 60px;
+            position: relative;
             >li{
                 &:first-child{
                     position: relative;
@@ -218,5 +223,58 @@
                 }
             }
         }
+    }
+    .mid_nav_last{
+        position: absolute;
+        top: 100px;
+        height: 0px;
+        background-color: #fff;
+        width: 100%;
+        z-index: 100;
+        left: 0px;
+        transition: height .3s .2s;
+        border-top: 0;
+        border-bottom: 0;
+        box-sizing: border-box;
+        box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.1);
+        /* border-top: 1px solid #e0e0e0; */
+        /* border-bottom: 1px solid #e0e0e0; */
+    }
+    .mid_nav_last:hover{
+        height: 230px;
+    }
+    .mid_nav_last .mid_nav_last_s{
+        height: 100%;
+        margin: 0 auto;
+        /* background-color: greenyellow; */
+        /* border-top: 1px solid #e0e0e0;
+        border-bottom: 1px solid #e0e0e0; */
+        box-sizing: border-box;
+        display: flex;
+    }
+    .mid_nav_last .mid_nav_last_s div{
+        width: calc(100% / 6);
+        height: 100%;
+        /* background-color: rosybrown; */
+        box-sizing: border-box;
+        overflow: hidden;
+        text-align: center;
+    }
+    .mid_nav_last .mid_nav_last_s span{
+        display: block;
+        margin: 30px 0 20px 0;
+        border-right: 1px solid #e0e0e0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .mid_nav_last_s a p:nth-of-type(1){
+        color: black;
+    }
+    .mid_nav_last_s a p:nth-of-type(2){
+        margin-top: 10px;
+        color: #ff6700;
+    }
+    .mid_nav_last .mid_nav_last_s .l_s{
+        border-right: 0;
     }
 }

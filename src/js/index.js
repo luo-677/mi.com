@@ -4,7 +4,7 @@ import { cookie } from '../js/library/cookie.js';
 if (cookie.get("status") === "true") {
     let username = cookie.get("username");
     let tmp = `<div class="head_right">
-    <a href="#">${username}</a>&nbsp;<svg class="icon" aria-hidden="true"><use xlink:href="#icon-xiajiantou"></use></svg><span>|</span><a href="#">消息通知</a><span>|</span><a href="#">我的订单</a>
+    <a href="javascript:;" class="username_btn">${username}</a>&nbsp;<svg class="icon" aria-hidden="true"><use xlink:href="#icon-xiajiantou"></use></svg><span>|</span><a href="#">消息通知</a><span>|</span><a href="#">我的订单</a>
     <i href="#" class="shopping">购物车<span>(<em>0</em>)</span><div class="shopping_box"></div></i>
 </div>`;
     console.log($(".head_right"));
@@ -61,5 +61,13 @@ $.ajax({
             </div>`
         })
         $(".miphone>.mpb_right_bot").append(tempbot);
+        $(".username_btn").on("click", function() {
+            cookie.remove("username");
+            cookie.remove("status");
+            location.reload();
+        })
     }
 });
+$(".shopping").on("click", function() {
+    location.href = "../html/shopping.html";
+})

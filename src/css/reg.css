@@ -33,6 +33,7 @@ a {
   text-align: center;
 }
 .wrap .reglogo {
+  cursor: pointer;
   font-size: 0;
   padding-bottom: 40px;
 }
@@ -133,6 +134,53 @@ a {
 }
 .wrap .regbox .reg_btn:hover {
   background-color: #ff936a;
+}
+.wrap .regbox .code,
+.wrap .regbox .code_user {
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+}
+.wrap .regbox .code_user {
+  width: 100%;
+  outline: none;
+}
+.wrap .regbox .resetcode {
+  height: 30px;
+  line-height: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.wrap .regbox .next,
+.wrap .regbox .back,
+.wrap .regbox .submit {
+  width: 100%;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  font-size: 14px;
+  border: 1px solid rgba(186, 186, 186, 0.3);
+  margin-top: 30px;
+  cursor: pointer;
+}
+.wrap .regbox .next,
+.wrap .regbox .submit {
+  background-color: #ff6700;
+  color: #fff;
+}
+.wrap .regbox .password,
+.wrap .regbox .password_again {
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  width: 100%;
+  outline: none;
+  margin-top: 15px;
+}
+.wrap .regbox .words {
+  margin-top: 15px;
 }
 .wrap .reg_footer {
   padding-top: 40px;

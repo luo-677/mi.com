@@ -22,11 +22,12 @@ if (cookie.get("status") === "true") {
     if (shop.length != 0) {
         let tmp = "";
         let money = 0;
+        let nums = 0;
         shop.forEach(function(elm, i) {
             let tmp_product = `
             <div class="sp_main_title sp_main_product clear sp_main_title${i}">
                 <div>
-                    <span class="check_box" data-i="${i}"><svg class="icon single_choose" aria-hidden="true" data-i="${i}">
+                    <span class="check_box" data-i="${i}"><svg class="icon single_choose single_choose${i}" aria-hidden="true" data-i="${i}">
                         <use xlink:href="#icon-duigou"></use>
                     </svg></span>
                 </div>
@@ -57,8 +58,8 @@ if (cookie.get("status") === "true") {
             </div>`
             tmp += tmp_product;
             money += parseInt(elm.price) * parseInt(elm.num);
+            nums += parseInt(elm.num);
         });
-        // console.log(tmp);
 
         let tmp2 = `
         <div class="sp_main_title clear">
@@ -76,7 +77,7 @@ if (cookie.get("status") === "true") {
         </div>
             ${tmp}
         <div class="car_sum clear">
-            <a href="javascript:;">继续购物</a><span>|</span><span>共&nbsp;<i>${shop.length}</i>&nbsp;件商品，已选择&nbsp;<i class="choose">${shop.length}</i>&nbsp;件&nbsp;</span>
+            <a href="javascript:;">继续购物</a><span>|</span><span>共&nbsp;<i class="choose_all">${nums}</i>&nbsp;件商品，已选择&nbsp;<i class="choose">${shop.length}</i>&nbsp;件&nbsp;</span>
             <span class="car_sum_right">
                 <span>合计：<i class="sum_price">${money}</i>元</span><a href="javascript:;" class="sum_btn">去结算</a>
             </span>
@@ -85,29 +86,36 @@ if (cookie.get("status") === "true") {
         // 选择按钮
         let count = shop.length;
         $(".check_box").on("click", function() {
-            if ($(this).children("svg").hasClass("svg_hide")) {
-                $(this).children("svg").removeClass("svg_hide");
-                let index = $(this).attr("data-i");
-                let class_name2 = "single_sum" + index;
-                money += parseInt($(`.${class_name2}`).html());
-                $(".sum_price").html(money);
-                count++;
-                $(".choose").html(count);
-            } else {
-                $(this).children("svg").addClass("svg_hide");
-                let index = $(this).attr("data-i");
-                let class_name2 = "single_sum" + index;
-                money -= parseInt($(`.${class_name2}`).html());
-                $(".sum_price").html(money);
-                count--;
-                $(".choose").html(count);
-            }
-            if (count != shop.length) {
-                $(".choose_sum").addClass("svg_hide");
-            } else {
-                $(".choose_sum").removeClass("svg_hide");
-            }
-        })
+                // 单个商品选中状态变更
+                if ($(this).children("svg").hasClass("svg_hide")) {
+                    // 选中状态显示
+                    $(this).children("svg").removeClass("svg_hide");
+                    let index = $(this).attr("data-i");
+                    let class_name2 = "single_sum" + index;
+                    money += parseInt($(`.${class_name2}`).html());
+                    $(".sum_price").html(money);
+                    count++;
+                    console.log(count);
+                    $(".choose").html(count);
+                } else {
+                    // 选中状态隐藏
+                    $(this).children("svg").addClass("svg_hide");
+                    let index = $(this).attr("data-i");
+                    let class_name2 = "single_sum" + index;
+                    money -= parseInt($(`.${class_name2}`).html());
+                    $(".sum_price").html(money);
+                    count--;
+                    console.log(count);
+                    $(".choose").html(count);
+                }
+                // 全选按钮的状态变更
+                if (count != shop.length) {
+                    $(".choose_sum").addClass("svg_hide");
+                } else {
+                    $(".choose_sum").removeClass("svg_hide");
+                }
+            })
+            // 全选按钮与单选按钮联动
         $(".choose_sum").on("click", function() {
                 if ($(this).hasClass("svg_hide")) {
                     $(this).removeClass("svg_hide");
@@ -118,20 +126,19 @@ if (cookie.get("status") === "true") {
                             let class_name2 = "single_sum" + index;
                             money += parseInt($(`.${class_name2}`).html());
                         }
-                        console.log(1);
                     })
-                    count = 3;
+                    count = shop.length;
+                    console.log(count);
                     $(".sum_price").html(money);
                     $(".choose").html(count);
                 } else {
                     $(this).addClass("svg_hide");
-                    console.log(2);
                     $(".sp_main_product .single_choose").each(function(i, elm) {
                         $(elm).addClass("svg_hide");
-                        console.log(2);
                     })
                     money = 0;
                     count = 0;
+                    console.log(count);
                     $(".sum_price").html(money);
                     $(".choose").html(count);
                 }
@@ -140,7 +147,6 @@ if (cookie.get("status") === "true") {
         $(".minus").on("click", function() {
                 if (parseInt($(this).next().val()) > 1) {
                     let num = parseInt($(this).next().val()) - 1;
-
                     $(this).next().val(num);
                     let index = parseInt($(this).next().attr("data-i"));
                     let class_name1 = "single" + index;
@@ -150,8 +156,14 @@ if (cookie.get("status") === "true") {
                     $(`.${class_name2}`).html(single_sum);
                     shop[index].num = num;
                     cookie.set("shop", JSON.stringify(shop));
-                    money -= parseInt(single);
-                    $(".sum_price").html(money);
+                    let class_name4 = "single_choose" + index;
+                    if (!($(`.${class_name4}`).hasClass("svg_hide"))) {
+                        money -= parseInt(single);
+                        $(".sum_price").html(money);
+                    }
+
+                    // 按钮减少商品数量
+                    $(".choose_all").html(parseInt($(".choose_all").html()) - 1);
                 } else {
                     alert("商品的数量不能小于1");
                 }
@@ -169,19 +181,23 @@ if (cookie.get("status") === "true") {
                     $(`.${class_name2}`).html(single_sum);
                     shop[index].num = num;
                     cookie.set("shop", JSON.stringify(shop));
-                    money += parseInt(single);
-                    $(".sum_price").html(money);
+                    let class_name4 = "single_choose" + index;
+                    if (!($(`.${class_name4}`).hasClass("svg_hide"))) {
+                        money += parseInt(single);
+                        $(".sum_price").html(money);
+                    }
+                    // 按钮增加商品数量
+                    $(".choose_all").html(parseInt($(".choose_all").html()) + 1);
                 } else {
                     alert("商品的数量不能大于99");
                 }
             })
             // 删除元素的同时删除cookie中的记录
-        let num = shop.length + 1;
+        let num_s = shop.length + 1;
         let count_num = 0;
         $(".delete_btn").on("click", function() {
             let index = parseInt($(this).attr("data-i"));
             console.log(index);
-            // num = index;
             // 将总价减去单个条目的总价
             let class_name2 = "single_sum" + index;
             money -= parseInt($(`.${class_name2}`).html());
@@ -190,14 +206,14 @@ if (cookie.get("status") === "true") {
             $(".choose").html(count);
             let class_name3 = "sp_main_title" + index;
             $(`.${class_name3}`).remove();
-            if (index > num) {
+            // index删除之后会移动位置，计算删除的个数，进行序列重排
+            if (index > num_s) {
                 index = index - count_num;
             }
             shop.splice(index, 1);
             console.log(shop);
-            // index删除之后会移动位置
             cookie.set("shop", JSON.stringify(shop));
-            num = index;
+            num_s = index;
             count_num++;
             if (shop.length == 0) {
                 let tmp = `

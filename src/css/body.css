@@ -183,6 +183,7 @@
   overflow: hidden;
   white-space: nowrap;
   margin-bottom: 12px;
+  padding: 0 10px;
 }
 #commodity .price span {
   color: #ff6700;

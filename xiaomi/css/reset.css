@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+}
+html,body{
+    width: 100%;
+}
+a,p,span{
+    font-size: 12px;
+    color: white;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+b,strong{
+    font-weight: normal;
+}
+em,i{
+    font-style: normal;
+}
+.clear::after{
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+.wrapper{
+    width: 1226px;
+    margin: 0 auto;
+    /* background-color: orange; */
+}
+.icon{
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}

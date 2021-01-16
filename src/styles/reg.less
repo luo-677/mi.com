@@ -31,6 +31,7 @@ a{
         text-align: center;
     }
     .reglogo{
+        cursor: pointer;
         font-size: 0;
         padding-bottom: 40px;
     }
@@ -128,6 +129,48 @@ a{
             &:hover{
                 background-color: #ff936a;
             }
+        }
+        .code,.code_user{
+            height: 40px;
+            line-height: 40px;
+            font-size: 20px;
+        }
+        .code_user{
+            width: 100%;
+            outline: none;
+        }
+        .resetcode{
+            height: 30px;
+            line-height: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            -webkit-user-select: none;
+            user-select:none;
+        }
+        .next,.back,.submit{
+            width: 100%;
+            height: 38px;
+            line-height: 38px;
+            text-align: center;
+            font-size: 14px;
+            border: 1px solid rgba(186, 186, 186, 0.3);
+            margin-top: 30px;
+            cursor: pointer;
+        }
+        .next,.submit{
+            background-color: #ff6700;
+            color: #fff;
+        }
+        .password,.password_again{
+            height: 40px;
+            line-height: 40px;
+            font-size: 20px;
+            width: 100%;
+            outline: none;
+            margin-top: 15px;
+        }
+        .words{
+            margin-top: 15px;
         }
     }
     .reg_footer{

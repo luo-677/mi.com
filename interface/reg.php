@@ -13,10 +13,10 @@
     // $_REQUEST[]  接收get/post数据
     $username = $_REQUEST['username'];
     $password = $_REQUEST['password'];
-    $email = $_REQUEST['email'];
-    $address = $_REQUEST['address'];
-    $phone = $_REQUEST['phone'];
-    $sex = $_REQUEST['sex'];
+    // $email = $_REQUEST['email'];
+    // $address = $_REQUEST['address'];
+    // $phone = $_REQUEST['phone'];
+    // $sex = $_REQUEST['sex'];
 
     // echo "$username  $password  $email  $address  $phone  $sex";
 
@@ -30,21 +30,23 @@
     // 通过判断 num_rows 可以知道是否查询到数据
     // var_dump($resuslt);
     if($resuslt->num_rows>0){
-        echo '<script>alert("用户名已存在");</script>';
-        echo '<script>location.href="../eg02.reg.html"</script>';
+        echo 0;
+        // echo '<script>alert("用户名已存在");</script>';
+        // echo '<script>location.href="../eg02.reg.html"</script>';
         $mysqli->close(); // 关闭连接
         die();  // 终止代码往下执行
     }
 
     // 用户名不存在的情况需要将数据写入数据库
-    $insertSql = "insert into users (username,password,email,address,phone,sex) values ('$username','$password','$email','$address','$phone','$sex')";
+    $insertSql = "insert into users (username,password,email,address,phone,sex) values ('$username','$password','1','1','1','1')";
     
     // 执行添加操作 会返回一个布尔值
     $res = $mysqli->query($insertSql);  
     $mysqli->close();
 
     if($res){
-        echo '<script>alert("注册成功");</script>';
-        echo '<script>location.href="../eg03.login.html"</script>';
+        // echo '<script>alert("注册成功");</script>';
+        // echo '<script>location.href="../eg03.login.html"</script>';
+        echo 1;
     }
 ?>
